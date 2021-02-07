@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TESDA | JS PYRAMID | DAY 10</title>
+    <link rel="icon" href="favicon.png" />
+    <meta
+      name="keywords"
+      content="html, css, tesda, TESDA, exercise, activity, webdev, web development, informatics, javascript, Javascript, loop, for loop"
+    />
+    <meta name="author" content="Jerome Gacoscosim" />
+    <script>
+      function generatePyramid(rows) {
+        var demo = document.getElementById('demo');
+        if (demo.innerHTML) {
+          location.reload();
+          return;
+        } else {
+          var text;
+          var output = '';
+          for (var i = 1; i <= rows; i++) {
+            for (var j = 1; j <= i; j++) {
+              demo.innerHTML += ' * ';
+              output += ' * ';
+            }
+            demo.innerHTML += '<br />';
+            console.log(output);
+            output = '';
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button
+      type="button"
+      onclick="generatePyramid(5)"
+      style="margin-bottom: 2rem"
+    >
+      Try it
+    </button>
+    <h1 id="demo"></h1>
+  </body>
+</html>
